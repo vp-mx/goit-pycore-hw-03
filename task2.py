@@ -9,8 +9,8 @@ def get_numbers_ticket(min_num: int, max_num: int, quantity: int) -> list[int]:
     :param quantity: The number of random numbers to generate.
     :return: A list of random numbers within the specified range.
     """
-    if min_num < 1 or max_num > 1000:
-        print("The minimum number must be not less than 1 and the maximum number not bigger 1000.")
+    if min_num >= max_num or min_num < 1 or max_num > 1000:
+        print("The minimum number must be less than max and both must be in range [1 - 1000].")
         return []
     if quantity > (max_num - min_num + 1):
         print(f"The quantity of numbers must be not less than provided range [{min_num}-{max_num}].")
