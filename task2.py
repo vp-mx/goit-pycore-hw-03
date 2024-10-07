@@ -13,7 +13,7 @@ def get_numbers_ticket(min_num: int, max_num: int, quantity: int) -> list[int]:
         print("The minimum number must be less than max and both must be in range [1 - 1000].")
         return []
     if quantity > (max_num - min_num + 1):
-        print(f"The quantity of numbers must be not less than provided range [{min_num}-{max_num}].")
+        print(f"The quantity of numbers must be not more than length of provided range [{min_num}-{max_num}].")
         return []
 
     numbers = random.sample(range(min_num, max_num + 1), k=quantity)
